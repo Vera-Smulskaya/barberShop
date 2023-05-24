@@ -42,7 +42,9 @@
         </ul>
       </nav>
       <a class="contact-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-      <button class="modal-open-btn modal-open-btn-theme-dark" type="button">онлайн-запис</button>
+      <button class="modal-open-btn modal-open-btn-theme-dark" type="button" data-modal-open>
+        онлайн-запис
+      </button>
     </div>
   </header>
 
@@ -106,7 +108,7 @@
     <section class="services section" id="services">
       <div class="container">
         <p class="suptitle suptitle-theme-dark">Проведи час у компанії кращих майстрів</p>
-        <h2 class="title">Послуги та ціни</h2>
+        <h2 class="title title-theme-dark">Послуги та ціни</h2>
         <div class="services-table-wrapper">
           <table class="services-table list">
             <tr class="services-table-row">
@@ -333,31 +335,47 @@
         </ul>
       </div>
     </section>
-    <div id="contacts">
-      <!-- CONTACT FORM -->
-      <section class="contact-form-section">
-        <h2 class="title">Онлайн-запис</h2>
-      </section>
-      <!-- CONTACT INFORMATION -->
-      <section class="contact-info-section">
-        <h2 class="title">Контакти</h2>
-        <address>
-          <ul class="contact-list list">
-            <li class="contact-list-item">
-              <a class="contact-list-link link" href="https://goo.gl/maps/fSdhoyAyDwtJdrEC6" target="_blank"
-                rel="noopener noreferrer">вул. Василькова, 7А Київ, 08132</a>
-            </li>
-            <li class="contact-list-item">
-              <a class="contact-list-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-            </li>
-            <li class="contact-list-item">
-              <a class="contact-list-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
-            </li>
-          </ul>
-        </address>
-        <h3 class="suptitle">час роботи</h3>
-        <p class="contact-info-date">Щоденно з 9:00 до 22:00</p>
-      </section>
+    <div class="contact-sections-wrapper section" id="contacts">
+      <div class="container contact-sections-wrapper-container">
+        <!-- CONTACT FORM -->
+        <section class="contact-form-section">
+          <h2 class="title title-theme-dark">Онлайн-запис</h2>
+        </section>
+        <!-- CONTACT INFORMATION -->
+        <section class="contact-info-section">
+          <h2 class="title title-theme-dark">Контакти</h2>
+          <address class="contact-info-address">
+            <ul class="contact-list list">
+              <li class="contact-list-item">
+                <a class="contact-list-link link" href="https://goo.gl/maps/fSdhoyAyDwtJdrEC6" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="contact-list-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-map-pin"></use>
+                  </svg>
+                  вул. Василькова, 7А Київ, 08132</a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-list-link link" href="tel:+380441111111">
+                  <svg class="contact-list-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 044 111 11 11
+                </a>
+              </li>
+              <li class="contact-list-item">
+                <a class="contact-list-link" href="mailto:barbershop@email.com">
+                  <svg class="contact-list-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  barbershop@email.com
+                </a>
+              </li>
+            </ul>
+          </address>
+          <h3 class="suptitle suptitle-theme-dark contact-info-suptitle">час роботи</h3>
+          <p class="contact-info-date">Щоденно з 9:00 до 22:00</p>
+        </section>
+      </div>
     </div>
   </main>
   <!-- FOOTER -->
@@ -374,6 +392,17 @@
       </ul>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="modal-close-btn" data-modal-close>
+        <svg class="modal-close-icon" width="24" height="24">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
